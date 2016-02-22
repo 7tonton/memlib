@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 22, 2016 at 12:01 PM
+-- Generation Time: Feb 22, 2016 at 01:24 PM
 -- Server version: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -57,7 +57,7 @@ CREATE TABLE `stu_info` (
   `stu_email` varchar(44) NOT NULL,
   `stu_address` varchar(100) NOT NULL,
   `stu_mob` varchar(44) NOT NULL,
-  `stu_date` datetime NOT NULL
+  `stu_date` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -65,7 +65,10 @@ CREATE TABLE `stu_info` (
 --
 
 INSERT INTO `stu_info` (`stu_id`, `stu_nid`, `stu_cam`, `stu_fname`, `stu_mname`, `stu_lname`, `stu_dep`, `stu_email`, `stu_address`, `stu_mob`, `stu_date`) VALUES
-('', '', '', '', '', '', '', '', '', '', '0000-00-00 00:00:00');
+('10110010', '1075701365', 'YUC', 'Abdurrahman', 'Jumman', 'Alzahrani', 'IT', 'abdzz@windowslive.com', 'Yanbu Industrial City / Ain Anwa', '966500332788', '0000-00-00 00:00:00'),
+('10110050', '1075701365', 'YUC', 'Abdurrahman', 'Jumman', 'Alzahrani', 'IT', 'abdzz@windowslive.com', 'Yanbu Industrial City / Ain Anwa', '966500332788', '0000-00-00 00:00:00'),
+('10110150', '1075701365', 'YUC', 'Abdurrahman', 'Jumman', 'Alzahrani', 'IT', 'abdzz@windowslive.com', 'Yanbu Industrial City / Ain Anwa', '966500332788', '0000-00-00 00:00:00'),
+('10110160', '1075701365', 'YUC', 'Abdurrahman', 'Jumman', 'Alzahrani', 'IT', 'abdzz@windowslive.com', 'Yanbu Industrial City / Ain Anwa', '966500332788', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
