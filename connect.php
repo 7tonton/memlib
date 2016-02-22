@@ -32,8 +32,8 @@ function mlf_db_close() {
 
 /*
 $DB_host = 'localhost';
-$DB_user = 'tonton';
-$DB_pass = 'mostring';
+$DB_user = 'root';
+$DB_pass = '';
 $DB_name = 'libform';
 
 if(!mysql_connect($DB_host, $DB_user, $DB_pass) || !mysql_select_db($DB_name)) {
