@@ -1,0 +1,74 @@
+<html>
+<head>
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<form action="save_stu.php" method="POST">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-4">
+	Student College ID:
+	<input type="text" name="student_college_id">
+	</div>
+	<div class="col-md-4">
+	National ID / Iqama ID:
+	<input type="text" name="national_id">
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-4">
+	Campus:
+	<input type="radio" name="cam" value="yic"> YIC
+    <input type="radio" name="cam" value="yuc_male"> YUC Male
+    <input type="radio" name="cam" value="yuc_female"> YUC Female
+	<input type="radio" name="cam" value="yti"> YTI
+	</div>
+	<div class="col-md-8">
+	First Name:
+	<br>
+	<input type="text" name="first_name">
+	<br>
+	Second Name:
+	<br>
+	<input type="text" name="second_name">
+	<br>
+	Last Name:
+	<br>
+	<input type="text" name="last_name">
+	</div>
+	</div>
+	<br>
+	Department:
+	<br>
+	<input type="text" name="department">
+	<br>
+	E-mail:
+	<br>
+	<input type="text" name="email">
+	<br>
+	Address:
+	<br>
+	<input type="text" name="address">
+	<br>
+	Mobile:
+	<br>
+	<input type="text" name="mobile">
+	<br>
+	<br>
+	<input type="submit" value="Submit">
+	</div>
+</form>
+</body>
+</html>
