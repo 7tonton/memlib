@@ -21,6 +21,7 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 
 		// check if user exists
 		$student = mlf_stu_get_by_id($student_college_id);
+		
 		if($student != NULL) {
 			mlf_db_close();
 			die('Student ID exists');
@@ -35,6 +36,7 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 		$student = mlf_stu_get_by_email($email);
 		if($student != NULL) {
 			mlf_db_close();
+
 			die('Email exists');
 		}
 

@@ -13,7 +13,7 @@ function mlf_stu_get($extra = '') {
 
 		$mysql_num_rows = @mysql_num_rows($query_run);
 		if($mysql_num_rows == 0)
-			return 'num row is 0';
+			return NULL;
 
 		$stu = array();
 		for($i = 0; $i < $mysql_num_rows; $i ++)
@@ -54,7 +54,7 @@ function mlf_stu_get_by_nationalID($stu_nid) {
 function mlf_stu_get_by_email($email) {
 
 	$new_email = mysql_real_escape_string(strip_tags($email));
-	$result = mlf_stu_get("WHERE `email` = '$new_email'");
+	$result = mlf_stu_get("WHERE `stu_email` = '$new_email'");
 	
 	if($result != NULL)
 		$student = $result;
@@ -84,6 +84,8 @@ function mlf_stu_add($stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_l
 
 	if(!mysql_query($query))
 		echo 'You can\'t be added, please try again';
+	
+	@mysql_free_result($query);
 	
 	return true;
 }
