@@ -20,55 +20,69 @@
     <![endif]-->
 </head>
 <body>
-
-<form action="save_stu.php" method="POST">
-	<div class="container">
+<div class="container">
+	<div class="page-header">
 		<div class="row">
 			<div class="col-md-4">
-				Student College ID:
-				<input type="text" name="student_college_id">
+				<img src="bootstrap/images/rcyci.png">	
 			</div>
 			<div class="col-md-4">
-				National ID / Iqama ID:
-				<input type="text" name="national_id">
+				<h3>The Royal Commission of Yanbu Colleges & Institutes Libraries & Learing Resources</h3>	
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-8">
-				Campus:
-				<input type="radio" name="cam" value="yic"> YIC
-				<input type="radio" name="cam" value="yuc_male"> YUC Male
-				<input type="radio" name="cam" value="yuc_female"> YUC Female
-				<input type="radio" name="cam" value="yti"> YTI
+			<div class="col-md-4">
+				<img src="bootstrap/images/proPic.png" style="width: 200px; height: 200px;">
 			</div>
-		</div>
-		<div class="row">
-			<div class="col-md8">
-				First Name:
-				<input type="text" name="first_name">
-				Second Name:
-				<input type="text" name="second_name">
-				Last Name:
-				<input type="text" name="last_name">
-			</div>
-		</div>
-		<br>
-		<div class="row">
-			Department:
-			<input type="text" name="department">
-			E-mail:
-			<input type="text" name="email">
-		</div>
-		<div class="row">
-			Address:
-			<input type="text" name="address">
-			Mobile:
-			<input type="text" name="mobile">
-		</div>
-		<div class="row">
-			<input type="submit" class="btn btn-primary btn-lg"></button>
-		</div>
+		</div>		
 	</div>
-</form>
+	<div class="innerElement">
+		<form action="save_stu.php" method="POST">
+			<div class="row">
+				<div class="col-md-4">
+					Student College ID:
+					<input type="text" name="student_college_id">
+				</div>
+				<div class="col-md-4">
+					National ID / Iqama ID:
+					<input type="text" name="national_id">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-8">
+					Campus:
+					<input type="radio" name="cam" value="yic"> YIC
+					<input type="radio" name="cam" value="yuc_male"> YUC Male
+					<input type="radio" name="cam" value="yuc_female"> YUC Female
+					<input type="radio" name="cam" value="yti"> YTI
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md8">
+					First Name:
+					<input type="text" name="first_name">
+					Second Name:
+					<input type="text" name="second_name">
+					Last Name:
+					<input type="text" name="last_name">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				Department:
+				<input type="text" name="department">
+				E-mail:
+				<input type="text" name="email">
+			</div>
+			<div class="row">
+				Address:
+				<input type="text" name="address">
+				Mobile:
+				<input type="text" name="mobile">
+			</div>
+			<div class="row">
+				<input type="submit" class="btn btn-primary btn-lg">
+			</div>
+		</form>
+	</div>
+</div>
 </body>
 </html>
