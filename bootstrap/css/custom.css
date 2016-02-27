@@ -1,7 +1,15 @@
 .container {
-  border: 1px solid #000;
+	border: 1px solid;
 }
 
 .innerElement {
   padding: 10px;
+}
+
+.input-group {
+	margin-top: 4px;
+}
+
+.btn {
+	margin-top: 5px;
 }

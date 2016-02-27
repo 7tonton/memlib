@@ -27,60 +27,97 @@
 				<img src="bootstrap/images/rcyci.png">	
 			</div>
 			<div class="col-md-4">
-				<h3>The Royal Commission of Yanbu Colleges & Institutes Libraries & Learing Resources</h3>	
+				<h1>The Royal Commission of Yanbu Colleges & Institutes Libraries & Learing Resources</h1>
 			</div>
 			<div class="col-md-4">
-				<img src="bootstrap/images/proPic.png" style="width: 200px; height: 200px;">
+				<img src="bootstrap/images/proPic.png" style="width: 140px; height: 160px; margin-left: 205;">
 			</div>
 		</div>		
 	</div>
 	<div class="innerElement">
 		<form action="save_stu.php" method="POST">
-			<div class="row">
-				<div class="col-md-4">
-					Student College ID:
-					<input type="text" name="student_college_id">
-				</div>
-				<div class="col-md-4">
-					National ID / Iqama ID:
-					<input type="text" name="national_id">
-				</div>
+
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="student_college_id" class="form-control" placeholder="Student College ID" aria-describedby="basic-addon1">
 			</div>
-			<div class="row">
-				<div class="col-md-8">
-					Campus:
-					<input type="radio" name="cam" value="yic"> YIC
-					<input type="radio" name="cam" value="yuc_male"> YUC Male
-					<input type="radio" name="cam" value="yuc_female"> YUC Female
-					<input type="radio" name="cam" value="yti"> YTI
-				</div>
+
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="national_id" class="form-control" placeholder="National ID / Iqama ID:" aria-describedby="basic-addon1">
 			</div>
+
 			<div class="row">
-				<div class="col-md8">
-					First Name:
-					<input type="text" name="first_name">
-					Second Name:
-					<input type="text" name="second_name">
-					Last Name:
-					<input type="text" name="last_name">
-				</div>
+			  <div class="col-lg-3">
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="radio" name="cam" aria-labelledby="..."> YUC-male
+			      </span>
+			    </div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+
+			  <div class="col-lg-3">
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="radio" name="cam" aria-describedby=""> YUC-femle
+			      </span>
+			    </div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+
+			  <div class="col-lg-3">
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="radio" name="cam" aria-label=""> YIC
+			      </span>
+			    </div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+
+			  <div class="col-lg-3">
+			    <div class="input-group">
+			      <span class="input-group-addon">
+			        <input type="radio" name="cam" aria-label="..."> YTI
+			      </span>
+			    </div><!-- /input-group -->
+			  </div><!-- /.col-lg-6 -->
+			</div><!-- /.row -->
+
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="first_name" class="form-control" placeholder="First Name:" aria-describedby="basic-addon1">
 			</div>
-			<br>
-			<div class="row">
-				Department:
-				<input type="text" name="department">
-				E-mail:
-				<input type="text" name="email">
+			
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="second_name" class="form-control" placeholder="Second Name:" aria-describedby="basic-addon1">
 			</div>
-			<div class="row">
-				Address:
-				<input type="text" name="address">
-				Mobile:
-				<input type="text" name="mobile">
+
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="last_name" class="form-control" placeholder="Last Name:" aria-describedby="basic-addon1">
 			</div>
-			<div class="row">
-				<input type="submit" class="btn btn-primary btn-lg">
+
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="department" class="form-control" placeholder="Department:" aria-describedby="basic-addon1">
+			</div>	
+			
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="email" class="form-control" placeholder="E-mail:" aria-describedby="basic-addon1">
+			</div>	
+			
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="address" class="form-control" placeholder="Address:" aria-describedby="basic-addon1">
+			</div>	
+			
+			<div class="input-group ">
+			  <span class="input-group-addon" id="basic-addon1">@</span>
+			  <input type="text" name="mobile" class="form-control" placeholder="Mobile:" aria-describedby="basic-addon1">
 			</div>
+			
+			<input type="submit" class="btn btn-primary btn-lg">
+
 		</form>
 	</div>
 </div>
