@@ -1,14 +1,20 @@
 body {
 	height: 842px;
 	width: 595px;
-	border: 6px solid;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .container {
 	height: 842px;
 	width: 595px;
+	border: 2px solid;
 }
 
-img {
-	padding-top: 5px;
+.page-header {
+	margin: 0px;
+}
+
+.col-md-4 {
+	border: 1px solid;
 }
