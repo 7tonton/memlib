@@ -1,0 +1,14 @@
+body {
+	height: 842px;
+	width: 595px;
+	border: 6px solid;
+}
+
+.container {
+	height: 842px;
+	width: 595px;
+}
+
+img {
+	padding-top: 5px;
+}

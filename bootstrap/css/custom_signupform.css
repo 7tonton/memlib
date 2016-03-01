@@ -1,0 +1,32 @@
+.container {
+	width: 600px;
+}
+
+.row {
+	padding: 1px;
+	margin-top: 10px;
+}
+
+.header-avatar {
+	margin-left: 194px;
+}
+
+.input-group {
+	margin-top: 5px;
+}
+
+.btn {
+	margin-top: 5px;
+}
+
+#headerEle1 {
+	width: 200px;
+}
+
+#headerEle2 {
+	width: 968px;
+}
+
+#rcycilogo {
+	margin-left: 225px;
+}
