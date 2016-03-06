@@ -4,6 +4,7 @@ body, .container {
 	margin-right: auto;
 	margin-left: auto;
 	border: 1px solid #000;
+	padding-right: 3px;
 }
 
 .col-md-3 {
@@ -22,14 +23,15 @@ body, .container {
 }
 
 #rect {
-	width:37px;
-	height:2px;
+	width:24px;
+	height:20px;
 	border:1px solid #000;
 }
 
+/*
 #secondRow {
 	padding-top: 10px; 
-}
+}*/
 
 #thirdRow, #fourthRow, #fivthRow, #fivthRow {
 	margin-left: 2px;
