@@ -79,8 +79,8 @@ function mlf_stu_add($stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_l
 	$stu_address= mysql_real_escape_string(strip_tags($stu_address));
 	$stu_mob    = mysql_real_escape_string(strip_tags($stu_mob));
 
-	$query = sprintf("INSERT INTO `stu_info`(`stu_id`, `stu_nid`, `stu_cam`, `stu_fname`, `stu_mname`, `stu_lname`, `stu_dep`, `stu_email`, `stu_address`, `stu_mob`, `stu_date`) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', NULL)",
-		$stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_lname, $stu_dep, $stu_email, $stu_address, $stu_mob);
+	$query = sprintf("INSERT INTO `stu_info`(`stu_id`, `stu_nid`, `stu_cam`, `stu_fname`, `stu_mname`, `stu_lname`, `stu_dep`, `stu_email`, `stu_address`, `stu_mob`, `stu_date`) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')",
+		$stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_lname, $stu_dep, $stu_email, $stu_address, $stu_mob, 'CURRENT_TIMESTAMP');
 
 	if(!mysql_query($query))
 		echo 'You can\'t be added, please try again';

@@ -24,7 +24,7 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 		
 		if($student != NULL) {
 			mlf_db_close();
-			die('Student ID exists');
+			die('Student College ID exists');
 		}
 
 		$student = mlf_stu_get_by_nationalID($national_id);
