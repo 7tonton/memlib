@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body, .container {
 	width:  8.27in;
 	height: 11.69in;
@@ -61,4 +62,67 @@ body, .container {
 	width: 50%;
 	text-align: left;
 	margin-left: auto;
+=======
+body, .container {
+	width:  8.27in;
+	height: 11.69in;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid #000;
+	padding-right: 3px;
+}
+
+.col-md-3 {
+	width: 10%;
+	margin-top: 5px;
+}
+
+.col-md-6 {
+	width: 77%;
+	text-align: center;
+	margin-left: 23px;
+}
+
+#underline {
+	text-decoration: underline;
+}
+
+#rect {
+	width:24px;
+	height:20px;
+	border:1px solid #000;
+}
+
+/*
+#secondRow {
+	padding-top: 10px; 
+}*/
+
+#thirdRow, #fourthRow, #fivthRow, #fivthRow {
+	margin-left: 2px;
+}
+
+#rect4 {
+	width:20px;
+	height:15px;
+	border:1px solid #000;
+	margin-left: 5px;
+}
+
+#rect5 {
+	width:37px;
+	height:24px;
+	border:1px solid #000;
+	margin-left: 5px;
+}
+
+#fivthRow {
+	text-align: left;
+}
+
+#sixthRowCol1, #sixthRowCol2 {
+	width: 50%;
+	text-align: left;
+	margin-left: auto;
+>>>>>>> 438bf380d3b9a90c4bd7b53236bed57215dcb656
 }
