@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> ::CONFIRM::</title>
+
+	<!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- custom style -->
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom_save_stu.css">
+</head>
+<body>
+	<div class="container">
+
 <?php
 
 if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset($_POST['cam']) && isset($_POST['first_name']) && isset($_POST['second_name']) && isset($_POST['last_name']) && isset($_POST['email']) && isset($_POST['address']) && isset($_POST['mobile'])) {
@@ -24,20 +38,20 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 		
 		if($student != NULL) {
 			mlf_db_close();
-			die('Student College ID exists');
+			die('<div class="alert alert-warning"><strong>Warning!</strong> Student College ID exists in our database please contact librayan. </div>');
 		}
 
 		$student = mlf_stu_get_by_nationalID($national_id);
 		if($student != NULL) {
 			mlf_db_close();
-			die('Student National ID exists');
+			die('<div class="alert alert-warning"><strong>Warning!</strong> Student National ID exists in our database please contact librayan. </div>');
 		}
 
 		$student = mlf_stu_get_by_email($email);
 		if($student != NULL) {
 			mlf_db_close();
 
-			die('Email exists');
+			die('<div class="alert alert-warning"><strong>Warning!</strong> Student Email exists in our database, please use another email or visit librayan</div>');
 		}
 
 		// trim function will delete spaces before and after the string.
@@ -46,7 +60,7 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 		mlf_db_close();
 
 		if($result) {
-			die('Success.');
+			die('<div class="alert alert-success"><strong>Success!</strong> you can visit library to confirm you registration ! bring picture with you </div>');
 		} else {
 			die('Failure.');
 		}
@@ -58,4 +72,9 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 } else {
 	die('Bad access');
 }
+
 ?>
+		</div>
+	</div>
+</body>
+</html>
