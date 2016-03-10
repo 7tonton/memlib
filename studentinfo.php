@@ -54,7 +54,7 @@
       ?>
 
       <form class="form-signin" action="studentinfo.php" method="post">
-        <h2 class="form-signin-heading">Student ID</h2>
+        <h2 class="form-signin-heading">Member ID</h2>
         <label for="inputEmail" class="sr-only"></label>
         <input type="text" class="form-control" name="stu_id" style="margin-bottom: 5px;" required autofocus>
         <button class="btn btn-lg btn-primary btn-block" type="submit">GET INFORMATION</button>
@@ -62,7 +62,7 @@
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><h3><?php echo $result->stu_fname; ?>'s Information</h3></div>
+        <div class="panel-heading"><h3><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) { echo $result->stu_fname."'s Information";} ?></h3></div>
         <table class="table table-hover">
 
           <tr>
@@ -70,17 +70,17 @@
             <th>Info</th>
           </tr>
 
-          <tr><td>Student ID</td><td><?php echo $result->stu_id; ?></td></tr>
-          <tr><td>Student Natinal ID</td><td><?php echo $result->stu_nid; ?></td></tr>
-          <tr><td>Campus</td><td><?php echo $result->stu_cam; ?></td></tr>
-          <tr><td>First Name</td><td><?php echo $result->stu_fname; ?></td></tr>
-          <tr><td>Middle Name</td><td><?php echo $result->stu_mname; ?></td></tr>
-          <tr><td>Last Name</td><td><?php echo $result->stu_lname; ?></td></tr>
-          <tr><td>Department</td><td><?php echo $result->stu_dep; ?></td></tr>
-          <tr><td>E-mail</td><td><?php echo $result->stu_email; ?></td></tr>
-          <tr><td>Address</td><td><?php echo $result->stu_address; ?></td></tr>
-          <tr><td>Mobile</td><td><?php echo $result->stu_mob; ?></td></tr>
-          <tr><td>Date</td><td><?php echo $result->stu_date; ?></td></tr>
+          <tr><td>Member ID</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_id;}?></td></tr>
+          <tr><td>Member Natinal ID</td><td><?php if(isset($_POST['stu_id'])&&!empty($_POST['stu_id'])){echo $result->stu_nid;}?></td></tr>
+          <tr><td>Campus</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_cam;}?></td></tr>
+          <tr><td>First Name</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_fname;}?></td></tr>
+          <tr><td>Middle Name</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_mname;}?></td></tr>
+          <tr><td>Last Name</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_lname;}?></td></tr>
+          <tr><td>Department</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_dep;}?></td></tr>
+          <tr><td>E-mail</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_email;}?></td></tr>
+          <tr><td>Address</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_address;}?></td></tr>
+          <tr><td>Mobile</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_mob;}?></td></tr>
+          <tr><td>Date</td><td><?php if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {echo $result->stu_date;}?></td></tr>
 
         </table>
       </div>
