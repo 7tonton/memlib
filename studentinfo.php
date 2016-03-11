@@ -43,7 +43,53 @@
 
           $result = mlf_stu_get_by_id($_POST['stu_id']);
           $result = $result[0];
-
+          
+          $s_id = NULL;
+          $s_nid = NULL;
+          $s_cam = NULL;
+          $s_fname = NULL;
+          $s_mname = NULL;
+          $s_lname = NULL;
+          $s_dep = NULL;
+          $s_email = NULL;
+          $s_address = NULL;
+          $s_mob = NULL;
+          $s_date = NULL;
+          
+          if($result != NULL) {
+          	
+          	$s_id = $result->stu_id;
+          	$s_nid = $result->stu_nid;
+          	$s_cam = $result->stu_cam;
+          	$s_fname = $result->stu_fname;
+          	$s_mname = $result->stu_mname;
+          	$s_lname = $result->stu_lname;
+          	$s_dep = $result->stu_dep;
+          	$s_email = $result->stu_email;
+          	$s_address = $result->stu_address;
+          	$s_mob = $result->stu_mob;
+          	$s_date = $result->stu_date;
+          	
+          	$panel_msg = $s_fname."'s Information";
+          	
+          } else {
+          	?>
+          		<script type="text/javascript">alert("No result found");</script>
+          	<?php 
+          }
+          
+        } else {
+        	$s_id = NULL;
+        	$s_nid = NULL;
+        	$s_cam = NULL;
+        	$s_fname = NULL;
+        	$s_mname = NULL;
+        	$s_lname = NULL;
+        	$s_dep = NULL;
+        	$s_email = NULL;
+        	$s_address = NULL;
+        	$s_mob = NULL;
+        	$s_date = NULL;
         }
           
         
@@ -58,7 +104,7 @@
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><h3><?php echo $result->stu_fname; ?>'s Information</h3></div>
+        <div class="panel-heading"><h3> Memeber Information </h3></div>
         <table class="table table-hover">
 
           <tr>
@@ -67,37 +113,37 @@
           </tr>
 
           <tr><td>Student ID</td>
-          	<td><?php echo $result->stu_id; ?></td>
+          	<td><?php echo $s_id; ?></td>
           </tr>
           <tr><td>Student Natinal ID</td>
-	          <td><?php echo $result->stu_nid; ?></td>
+	          <td><?php echo $s_nid; ?></td>
           </tr>
           <tr><td>Campus</td>
-	          <td><?php echo $result->stu_cam; ?></td>
+	          <td><?php echo $s_cam; ?></td>
           </tr>
           <tr><td>First Name</td>
-	          <td><?php echo $result->stu_fname; ?></td>
+	          <td><?php echo $s_fname; ?></td>
           </tr>
           <tr><td>Middle Name</td>
-	          <td><?php echo $result->stu_mname; ?></td>
+	          <td><?php echo $s_mname; ?></td>
           </tr>
           <tr><td>Last Name</td>
-	          <td><?php echo $result->stu_lname; ?></td>
+	          <td><?php echo $s_lname; ?></td>
           </tr>
           <tr><td>Department</td>
-	          <td><?php echo $result->stu_dep; ?></td>
+	          <td><?php echo $s_dep; ?></td>
           </tr>
           <tr><td>E-mail</td>
-	          <td><?php echo $result->stu_email; ?></td>
+	          <td><?php echo $s_email; ?></td>
           </tr>
           <tr><td>Address</td>
-	          <td><?php echo $result->stu_address; ?></td>
+	          <td><?php echo $s_address; ?></td>
           </tr>
           <tr><td>Mobile</td>
-	          <td><?php echo $result->stu_mob; ?></td>
+	          <td><?php echo $s_mob; ?></td>
           </tr>
           <tr><td>Date</td>
-	          <td><?php echo $result->stu_date; ?></td>
+	          <td><?php echo $s_date; ?></td>
           </tr>
 
         </table>
