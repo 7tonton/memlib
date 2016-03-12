@@ -54,6 +54,8 @@
 				$username = $_POST['username'];
 				$password = $_POST['password'];
 
+				$userpass = array('root', 'toor', 'welcome', 'welcome');
+
 				if(!empty($username) && !empty($password))
 					header("Location: studentinfo.php");
 			}
