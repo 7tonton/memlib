@@ -148,6 +148,44 @@
 
         </table>
       </div>
+      
+      <form class="form-signin" action="studentinfo.php" method="post">
+        <button class="btn btn-lg btn-primary btn-block" name="confirmBtn" type="submit">Confirm Membership</button>
+      </form>
+      
+      <?php 
+      	if(isset($_POST['confirmBtn'])) {
+      		if($s_id != NULL && $s_nid != NULL && $s_cam != NULL && $s_fname != NULL && $s_mname != NULL && $s_lname != NULL && $s_dep != NULL && $s_email != NULL && $s_address != NULL && $s_mob != NULL) {
+      		
+      			// call Student API & connect.php
+      			require('API_stu.php');
+      			require('connect.php');
+      		
+      			// check if user exists
+      			$student = mlf_stu_get_by_id($student_college_id);
+      		
+      			if($student != NULL) {
+      				mlf_db_close();
+      				die('<div class="alert alert-warning"><strong>Warning!</strong> Student College ID exists in the database. </div>');
+      			}
+      		
+      			// trim function will delete spaces before and after the string.
+      			$result = mlf_mem_confirm(trim($s_id), trim($s_nid), trim($s_cam), trim($s_fname), trim($s_mname), trim($s_lname), trim($s_dep), trim($s_email), trim($s_address), trim($s_mob));
+      		
+      			mlf_db_close();
+      		
+      			if($result) {
+      				die('<div class="alert alert-success"><strong>Success!</strong>Confirm Done</div>');
+      			} else {
+      				die('Failure.');
+      			}
+      		
+      		
+      		} else {
+      			die('<div class="alert alert-warning"><strong>Warning!</strong> Enter Member ID. </div>');
+      		}
+      	}
+      ?>
 
     </div> <!-- /container -->
 
