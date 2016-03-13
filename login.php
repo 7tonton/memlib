@@ -54,10 +54,10 @@
 				$username = $_POST['username'];
 				$password = $_POST['password'];
 
-				$userpass = array('root', 'toor', 'welcome', 'welcome');
-
-				if(!empty($username) && !empty($password))
-					header("Location: studentinfo.php");
+				if(!empty($username) && !empty($password)) {
+					if($username == 'root' && $password == 'passwd')
+						header("Location: studentinfo.php");
+				}
 			}
 
 		  ?>
