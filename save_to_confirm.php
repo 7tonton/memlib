@@ -13,19 +13,22 @@
 	<div class="container">
 <?php
 
+session_start();
+echo 'Hello, World!';
+
 if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['s_id']) ) {
 
 	// call Student API & connect.php
 	require('API_stu.php');
 	require('connect.php');
-	session_start();
+	
 
 	// check if user exists
 	$member = mlf_mem_get_by_id($_SESSION['s_id']);
 
 	if($member != NULL) {
 		mlf_db_close();
-		die('<div class="alert alert-warning"><strong>Warning!</strong> Memeber ID exists in the database. </div>');
+		die('<div class="alert alert-warning"><strong>Warning!1</strong> Memeber ID exists in the database. </div>');
 	}
 
 	// trim function will delete spaces before and after the string.
@@ -37,13 +40,13 @@ if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['
 	session_destroy();	
 	
 	if($result) {
-		die('<div class="alert alert-success"><strong>Success!</strong>Confirmation is Done</div>');
+		die('<div class="alert alert-success"><strong>Success!</strong> Confirmation is Done</div>');
 	} else {
 		die('Failure.');
 	}
 	
 } else {
-	die('<div class="alert alert-warning"><strong>Warning!</strong> 	 </div>');
+	die('<div class="alert alert-warning"><strong>Warning!2</strong> No Entry to save</div>');
 }
 
 ?>
