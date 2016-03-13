@@ -2,7 +2,6 @@
 
 // Student API ::
 
-
 function mlf_stu_get($extra = '') {
 
 		$query = sprintf("SELECT * FROM `tbl_temp` %s", $extra);
@@ -90,7 +89,43 @@ function mlf_stu_add($stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_l
 	return true;
 }
 
-function mlf_mem_confirm($stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_lname, $stu_dep, $stu_email, $stu_address, $stu_mob) {
+// Member API ::
+
+function mlf_mem_get($extra = '') {
+
+	$query = sprintf("SELECT * FROM `tbl_member` %s", $extra);
+	$query_run = mysql_query($query);
+
+	if(!@query_run)
+		echo mysql_error();
+
+	$mysql_num_rows = @mysql_num_rows($query_run);
+	if($mysql_num_rows == 0)
+		return NULL;
+
+	$stu = array();
+	for($i = 0; $i < $mysql_num_rows; $i ++)
+		$stu[count($stu)] = mysql_fetch_object($query_run);
+
+	@mysql_free_result($query_run);
+
+	return $stu;
+}
+
+function mlf_mem_get_by_id($stu_id) {
+
+	$check_stu_id = mysql_real_escape_string(strip_tags($stu_id));
+
+	$result = mlf_mem_get("WHERE `stu_id` = '$check_stu_id'");
+	if($result != NULL)
+		$stu = $result;
+	else
+		return NULL;
+
+	return $stu;
+}
+
+function mlf_mem_add($stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_lname, $stu_dep, $stu_email, $stu_address, $stu_mob) {
 	if(empty($stu_id) || empty($stu_nid) || empty($stu_cam) || empty($stu_fname) || empty($stu_mname) || empty($stu_lname) || empty($stu_dep) || empty($stu_email) || empty($stu_address) || empty($stu_mob))
 		return false;
 
