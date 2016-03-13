@@ -88,7 +88,11 @@
           	
           } else {
           	?>
-          		<script type="text/javascript">alert("No result found");</script>
+          		<div class="panel panel-default">
+				  <div class="panel-body" style="text-align: center;">
+				    No Result Found
+				  </div>
+				</div>
           	<?php 
           }
           
