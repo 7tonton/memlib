@@ -72,6 +72,20 @@
           	
           	$panel_msg = $s_fname."'s Information";
           	
+          	// create sessions
+          	session_start();
+          	$_SESSION['s_id'] = $s_id;
+          	$_SESSION['s_nid'] = $s_nid;
+          	$_SESSION['s_cam'] = $s_cam;
+          	$_SESSION['s_fname'] = $s_fname;
+          	$_SESSION['s_mname'] = $s_mname;
+          	$_SESSION['s_lname'] = $s_lname;
+          	$_SESSION['s_dep'] = $s_dep;
+          	$_SESSION['s_email'] = $s_email;
+          	$_SESSION['s_address'] = $s_address;
+          	$_SESSION['s_mob'] = $s_mob;
+          	$_SESSION['s_date'] = $s_date;
+          	
           } else {
           	?>
           		<script type="text/javascript">alert("No result found");</script>
@@ -149,43 +163,10 @@
         </table>
       </div>
       
-      <form class="form-signin" action="studentinfo.php" method="post">
+      <form class="form-signin" action="save_to_confirm.php" method="post">
         <button class="btn btn-lg btn-primary btn-block" name="confirmBtn" type="submit">Confirm Membership</button>
       </form>
       
-      <?php 
-      	if(isset($_POST['confirmBtn'])) {
-      		if($s_id != NULL && $s_nid != NULL && $s_cam != NULL && $s_fname != NULL && $s_mname != NULL && $s_lname != NULL && $s_dep != NULL && $s_email != NULL && $s_address != NULL && $s_mob != NULL) {
-      		
-      			// call Student API & connect.php
-      			require('API_stu.php');
-      			require('connect.php');
-      		
-      			// check if user exists
-      			$student = mlf_stu_get_by_id($student_college_id);
-      		
-      			if($student != NULL) {
-      				mlf_db_close();
-      				die('<div class="alert alert-warning"><strong>Warning!</strong> Student College ID exists in the database. </div>');
-      			}
-      		
-      			// trim function will delete spaces before and after the string.
-      			$result = mlf_mem_confirm(trim($s_id), trim($s_nid), trim($s_cam), trim($s_fname), trim($s_mname), trim($s_lname), trim($s_dep), trim($s_email), trim($s_address), trim($s_mob));
-      		
-      			mlf_db_close();
-      		
-      			if($result) {
-      				die('<div class="alert alert-success"><strong>Success!</strong>Confirm Done</div>');
-      			} else {
-      				die('Failure.');
-      			}
-      		
-      		
-      		} else {
-      			die('<div class="alert alert-warning"><strong>Warning!</strong> Enter Member ID. </div>');
-      		}
-      	}
-      ?>
 
     </div> <!-- /container -->
 
