@@ -38,8 +38,8 @@
 
       <?php 
         if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {
-          require('API_stu.php');
-          require('connect.php');
+          require('db_API.inc.php');
+          require('connect.inc.php');
 
           $result = mlf_stu_get_by_id($_POST['stu_id']);
           $result = $result[0];
@@ -113,7 +113,7 @@
         
       ?>
 
-      <form class="form-signin" action="studentinfo.php" method="post">
+      <form class="form-signin" action="member_info.php" method="post">
         <h2 class="form-signin-heading">Memeber ID</h2>
         <label for="inputEmail" class="sr-only"></label>
         <input type="text" class="form-control" name="stu_id" style="margin-bottom: 5px;" required autofocus>
@@ -167,7 +167,7 @@
         </table>
       </div>
       
-      <form class="form-signin" action="save_to_confirm.php" method="post">
+      <form class="form-signin" action="member_add.php" method="post">
         <button class="btn btn-lg btn-primary btn-block" name="confirmBtn" type="submit">Confirm Membership</button>
       </form>
       

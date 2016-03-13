@@ -7,7 +7,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!-- custom style -->
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom_save_stu.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom_add.css">
 </head>
 <body>
 	<div class="container">
@@ -19,8 +19,8 @@ echo 'Hello, World!';
 if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['s_id']) ) {
 
 	// call Student API & connect.php
-	require('API_stu.php');
-	require('connect.php');
+	require('db_API.inc.php');
+	require('connect.inc.php');
 	
 
 	// check if user exists

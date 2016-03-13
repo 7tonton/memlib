@@ -7,7 +7,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
 	<!-- custom style -->
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom_save_stu.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom_add.css">
 </head>
 <body>
 	<div class="container">
@@ -30,8 +30,8 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 	if(!empty($student_college_id) && !empty($national_id) && !empty($cam) && !empty($first_name) && !empty($second_name) && !empty($last_name) && !empty($department) && !empty($email) && !empty($address) && !empty($mobile)) {
 
 		// call Student API & connect.php
-		require('API_stu.php');
-		require('connect.php');
+		require('db_API.inc.php');
+		require('connect.inc.php');
 
 		// check if user exists
 		$student = mlf_stu_get_by_id($student_college_id);

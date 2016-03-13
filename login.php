@@ -56,7 +56,7 @@
 
 				if(!empty($username) && !empty($password)) {
 					if($username == 'root' && $password == 'passwd')
-						header("Location: studentinfo.php");
+						header("Location: member_info.php");
 				}
 			}
 
