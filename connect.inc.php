@@ -1,20 +1,22 @@
 <?php 
 
 $mlf_host = 'localhost';
-$mlf_user = 'root';
-$mlf_pass = '';
+$mlf_user = 'user1';
+$mlf_pass = 'user1';
 
 $mlf_db_name = 'libform';
 
 @$mlf_handle = mysql_connect($mlf_host, $mlf_user, $mlf_pass);
 if(!$mlf_handle) {
-	die('Connection problem ...');
+	// exit('Connection problem ...');
+	echo 'Connection problem ...';
 }
 
 $mlf_db_result = mysql_select_db($mlf_db_name);
 if(!@mlf_db_result) {
 	mysql_close($mlf_handle);
-	die('Selection problem ...');
+	// exit('Selection problem ...');
+	echo 'Selection problem ...';
 } 
 
 @mysql_query("SET NAMES 'utf8'"); // set the inputs to be utf8 to accept all kind of letters
@@ -29,20 +31,5 @@ function mlf_db_close() {
 	global $mlf_handle;
 	@mysql_close($mlf_handle);
 }
-
-/*
-$DB_host = 'localhost';
-$DB_user = 'root';
-$DB_pass = '';
-$DB_name = 'libform';
-
-if(!mysql_connect($DB_host, $DB_user, $DB_pass) || !mysql_select_db($DB_name)) {
-	die('Connection refused');
-}
-
-function mlf_db_close() {
-	global $tf_handle;
-	@mysql_close($tf_handle);
-} */
 
 ?>

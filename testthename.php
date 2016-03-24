@@ -1,7 +1,1 @@
-<?php 
-
-$vartest = 'Abdurrahman';
-
-echo $vartest;
-
-?>
+<a href="<?php echo $_SERVER['HTTP_REFERER']; ?>"> Go Back </a>

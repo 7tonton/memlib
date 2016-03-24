@@ -14,7 +14,6 @@
 <?php
 
 session_start();
-echo 'Hello, World!';
 
 if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['s_id']) ) {
 
@@ -51,6 +50,17 @@ if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['
 
 ?>
 	</div>
+	<div class="containerFotter">
+		
+		<button type="submit" onclick="window.location.href='http://localhost/memlib/index.php'" value="BACK" class="btn btn-default btn-lg" style="width: 100px;">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+			Home
+		</button>
+		
+		<button type="submit" onclick="window.location.href='<?php echo $_SERVER['HTTP_REFERER']; ?>'" value="BACK" class="btn btn-default btn-lg " style="float: right ; width: 100px;">
+			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+			Back
+		</button>
 	</div>
 </body>
 </html>
