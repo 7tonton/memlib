@@ -2,6 +2,14 @@
 	width: 600px;
 	padding: 30px;
 	padding-top: 50px;
-	background: rgba(10, 8, 16, 0.37);
+	background: #ddd;
 	text-align: center;
+}
+
+.containerFotter {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 8px;
+	background: #008c9e ;
 }
