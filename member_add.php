@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php require('include/lang.inc.php'); ?>
+	<?php require('include/lang.inc.php'); require('include/config.inc.php'); ?>
 	<title> <?php echo message('member_add_1'); ?> </title>
 
 	<!-- Bootstrap core CSS -->
@@ -11,6 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom_add.css">
 </head>
 <body>
+	<div class="containerFotter">
+		
+		<button type="submit" onclick="window.location.href='http://localhost/memlib/index.php'" value="BACK" class="btn btn-default btn-lg" style="width: 100px;">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+			Home
+		</button>
+		
+		<button type="submit" onclick="window.location.href='<?php echo $_SERVER['HTTP_REFERER']; ?>'" value="BACK" class="btn btn-default btn-lg " style="float: right ; width: 100px;">
+			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+			Back
+		</button>
+	</div>
 	<div class="container">
 <?php
 
@@ -51,17 +63,6 @@ if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['
 
 ?>
 	</div>
-	<div class="containerFotter">
-		
-		<button type="submit" onclick="window.location.href='http://localhost/memlib/index.php'" value="BACK" class="btn btn-default btn-lg" style="width: 100px;">
-			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-			Home
-		</button>
-		
-		<button type="submit" onclick="window.location.href='<?php echo $_SERVER['HTTP_REFERER']; ?>'" value="BACK" class="btn btn-default btn-lg " style="float: right ; width: 100px;">
-			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-			Back
-		</button>
-	</div>
+
 </body>
 </html>

@@ -7,7 +7,7 @@ $password = 'mostring';
 $database_name = 'libform';
 
 // file directions
-$homepage = 'mint/memlib.index.php';
-
+$homepage = 'member_add.php';
+$homepage = 'vist_add.php';
 
 ?>

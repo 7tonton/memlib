@@ -11,6 +11,18 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/custom_add.css">
 </head>
 <body>
+	<div class="containerFotter">
+		
+		<button type="submit" onclick="window.location.href='http://localhost/memlib/index.php'" value="BACK" class="btn btn-default btn-lg" style="width: 100px;">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+			Home
+		</button>
+		
+		<button type="submit" onclick="window.location.href='<?php echo $_SERVER['HTTP_REFERER']; ?>'" value="BACK" class="btn btn-default btn-lg " style="float: right ; width: 100px;">
+			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
+			Back
+		</button>
+	</div>
 	<div class="container">
 
 <?php
@@ -76,17 +88,5 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 
 ?>
 		</div>
-	<div class="containerFotter">
-		
-		<button type="submit" onclick="window.location.href='http://localhost/memlib/index.php'" value="BACK" class="btn btn-default btn-lg" style="width: 100px;">
-			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
-			Home
-		</button>
-		
-		<button type="submit" onclick="window.location.href='<?php echo $_SERVER['HTTP_REFERER']; ?>'" value="BACK" class="btn btn-default btn-lg " style="float: right ; width: 100px;">
-			<span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span>
-			Back
-		</button>
-	</div>
 </body>
 </html>
