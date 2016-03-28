@@ -1,8 +1,8 @@
 <?php 
 
 $mlf_host = 'localhost';
-$mlf_user = 'user1';
-$mlf_pass = 'user1';
+$mlf_user = 'tonton';
+$mlf_pass = 'mostring';
 
 $mlf_db_name = 'libform';
 

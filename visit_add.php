@@ -30,8 +30,8 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 	if(!empty($student_college_id) && !empty($national_id) && !empty($cam) && !empty($first_name) && !empty($second_name) && !empty($last_name) && !empty($department) && !empty($email) && !empty($address) && !empty($mobile)) {
 
 		// call Student API & connect.php
-		require('db_API.inc.php');
-		require('connect.inc.php');
+		require('include/db_API_VIS.inc.php');
+		require('include/connect.inc.php');
 
 		// check if user exists
 		$student = mlf_stu_get_by_id($student_college_id);

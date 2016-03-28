@@ -38,8 +38,8 @@
 
       <?php 
         if(isset($_POST['stu_id']) && !empty($_POST['stu_id'])) {
-          require('db_API.inc.php');
-          require('connect.inc.php');
+          require('include/db_API_VIS.inc.php');
+          require('include/connect.inc.php');
 
           $result = mlf_stu_get_by_id($_POST['stu_id']);
           $result = $result[0];

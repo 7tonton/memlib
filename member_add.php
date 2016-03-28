@@ -18,8 +18,8 @@ session_start();
 if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['s_id']) ) {
 
 	// call Student API & connect.php
-	require('db_API.inc.php');
-	require('connect.inc.php');
+	require('include/db_API_MEM.inc.php');
+	require('include/connect.inc.php');
 	
 
 	// check if user exists
