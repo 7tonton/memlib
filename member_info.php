@@ -10,7 +10,8 @@
     <meta name="author" content="">
     <link rel="icon" href="avicon.ico">
 
-    <title>Student Form</title>
+    <?php require('include/lang.inc.php');  ?>
+    <title><?php echo message('member_info_1'); ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -114,15 +115,15 @@
       ?>
 
       <form class="form-signin" action="member_info.php" method="post">
-        <h2 class="form-signin-heading">Memeber ID</h2>
-        <label for="inputEmail" class="sr-only"></label>
+        <h2 class="form-signin-heading"></h2>
+        <label for="inputEmail" class="sr-only"><?php echo message('member_info_2'); ?></label>
         <input type="text" class="form-control" name="stu_id" style="margin-bottom: 5px;" required autofocus>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">GET INFORMATION</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><?php echo message('member_info_3'); ?></button>
       </form>
 
       <div class="panel panel-default">
         <!-- Default panel contents -->
-        <div class="panel-heading"><h3> Memeber Information </h3></div>
+        <div class="panel-heading"><h3> <?php echo message('member_info_4'); ?> </h3></div>
         <table class="table table-hover">
 
           <tr>
@@ -168,7 +169,7 @@
       </div>
       
       <form class="form-signin" action="member_add.php" method="post">
-        <button class="btn btn-lg btn-primary btn-block" name="confirmBtn" type="submit">Confirm Membership</button>
+        <button class="btn btn-lg btn-primary btn-block" name="confirmBtn" type="submit"><?php echo message('member_info_5'); ?></button>
       </form>
       
 

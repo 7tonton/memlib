@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
-<title>Show Dircatinos</title>
+<?php require('include/lang.inc.php'); ?>
+<title><?php echo message('index_1'); ?></title>
 
 <style type="text/css">
 
@@ -20,19 +20,19 @@
 
 	<div class="container">
 		
-		<this style="font-weight: 600;">The Royal Commission of Yanbu Colleges & Institutes Libraries & Learing Resources</this> 
+		<this style="font-weight: 600;"><?php echo message('index_2'); ?></this> 
 
 		<br>
 
-		<u>MEMBERSHIP FORM</u>
+		<u><?php echo message('index_3'); ?></u>
 
 		<br><br><br>
 
-		<a href="visit_signup.html"> Signup For New Memebership </a>
+		<a href="visit_signup.html"> <?php echo message('index_4'); ?> </a>
 
 		<br>
 
-		<a href="login.php"> Confirm Memebership </a>
+		<a href="login.php"> <?php echo message('index_5'); ?> </a>
 	</div>
 
 </body>

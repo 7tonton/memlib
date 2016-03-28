@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> ::CONFIRM::</title>
+	<?php require('include/lang.inc.php'); ?>
+	<title> <?php echo message('member_add_1'); ?> </title>
 
 	<!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,7 +28,7 @@ if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['
 
 	if($member != NULL) {
 		mlf_db_close();
-		die('<div class="alert alert-warning"><strong>Warning!1</strong> Memeber ID exists in the database. </div>');
+		die(message('member_add_2'));
 	}
 
 	// trim function will delete spaces before and after the string.
@@ -39,13 +40,13 @@ if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['
 	session_destroy();	
 	
 	if($result) {
-		die('<div class="alert alert-success"><strong>Success!</strong> Confirmation is Done</div>');
+		die(messge('member_add_3'));
 	} else {
-		die('Failure.');
+		die(message('member_add_4'));
 	}
 	
 } else {
-	die('<div class="alert alert-warning"><strong>Warning!2</strong> No Entry to save</div>');
+	die(message('member_add_5'));
 }
 
 ?>

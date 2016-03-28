@@ -10,7 +10,8 @@
     <meta name="author" content="">
     <link rel="icon" href="avicon.ico">
 
-    <title>Librarian login</title>
+    <?php require('include/lang.inc.php'); ?>
+    <title><?php echo message('login_1'); ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,10 +35,10 @@
     <div class="container">
 
       <form class="form-signin" action="<?php echo $_SERVER['SCRIPT_NAME']; ?>" method="post">
-        <h2 class="form-signin-heading">Please sign in</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
+        <h2 class="form-signin-heading"><?php echo message('login_2'); ?></h2>
+        <label for="inputEmail" class="sr-only"><?php echo message('login_3'); ?></label>
         <input type="username" id="inputUsername" class="form-control" placeholder="Username" name="username" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
+        <label for="inputPassword" class="sr-only"><?php echo message('login_4'); ?></label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
         <div class="checkbox">
           <label>
@@ -45,7 +46,7 @@
             <!-- <input type="checkbox" value="remember-me"> Remember me -->
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit"><?php echo message('login_6'); ?></button>
       </form>
       
 	      <?php

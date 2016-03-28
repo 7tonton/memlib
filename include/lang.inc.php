@@ -24,7 +24,7 @@ function message($msg_code) {
 		return "Librarian login";
 		break;
 	case 'login_2':
-		return "Please sign in";
+		return "Login ...";
 		break;
 	case 'login_3':
 		return "Email address";
@@ -35,19 +35,25 @@ function message($msg_code) {
 	case 'login_5':
 		return "Register";
 		break;
+	case 'login_6':
+		return "Login";
+		break;
 
 	// member_add.php
 	case 'member_add_1':
 		return "::CONFIRM::";
 		break;
 	case 'member_add_2':
-		return "<strong>Warning!1</strong> Memeber ID exists in the database.";
+		return "<div class=\"alert alert-warning\"><strong>Warning!1</strong> Memeber ID exists in the database. </div>";
 		break;
 	case 'member_add_3':
-		return "<strong>Success!</strong> Confirmation is Done.";
+		return "<div class=\"alert alert-success\"><strong>Success!</strong> Confirmation is Done</div>";
 		break;
-	case 'member_add_4':
-		return "<strong>Warning!2</strong> No Entry to save.";
+	case 'member_add_4';
+		return "Failure.";
+		break;
+	case 'member_add_5':
+		return "<div class=\"alert alert-warning\"><strong>Warning!2</strong> No Entry to save</div>";
 		break;
 
 	// member_info.php
@@ -72,16 +78,16 @@ function message($msg_code) {
 		return "::CONFIRM::";
 		break;
 	case 'visit_add_2';
-		return "<strong>Warning!</strong> Student College ID exists in our database please contact librayan.";
+		return "<div class=\"alert alert-warning\"><strong>Warning!</strong> Student College ID exists in our database please contact librayan. </div>";
 		break;
 	case 'visit_add_3';
-		return "<strong>Warning!</strong> Student National ID exists in our database please contact librayan.";
+		return "<div class=\"alert alert-warning\"><strong>Warning!</strong> Student National ID exists in our database please contact librayan. </div>";
 		break;
 	case 'visit_add_4';
-		return "<strong>Warning!</strong> Student Email exists in our database, please use another email or visit librayan";
+		return "<div class=\"alert alert-warning\"><strong>Warning!</strong> Student Email exists in our database, please use another email or visit librayan</div>";
 		break;
 	case 'visit_add_5';
-		return "<strong>Success!</strong> you can visit library to confirm you registration ! bring picture with you";
+		return "<div class=\"alert alert-success\"><strong>Success!</strong> you can visit library to confirm you registration ! bring picture with you </div>";
 		break;
 	case 'visit_add_6';
 		return "Failure.";

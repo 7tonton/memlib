@@ -82,7 +82,7 @@ function mlf_stu_add($stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_l
 		$stu_id, $stu_nid, $stu_cam, $stu_fname, $stu_mname, $stu_lname, $stu_dep, $stu_email, $stu_address, $stu_mob);
 
 	if(!mysql_query($query))
-		echo 'You can\'t be added, please try again';
+		return false;
 	
 	@mysql_free_result($query);
 	

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> ::CONFIRM::</title>
+	<?php require('include/lagn.inc.php'); ?>
+	<title> <?php echo message('visit_add_1'); ?> </title>
 
 	<!-- Bootstrap core CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,20 +39,20 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 		
 		if($student != NULL) {
 			mlf_db_close();
-			die('<div class="alert alert-warning"><strong>Warning!</strong> Student College ID exists in our database please contact librayan. </div>');
+			die(message('visit_add_2'));
 		}
 
 		$student = mlf_stu_get_by_nationalID($national_id);
 		if($student != NULL) {
 			mlf_db_close();
-			die('<div class="alert alert-warning"><strong>Warning!</strong> Student National ID exists in our database please contact librayan. </div>');
+			die(message('visit_add_3'));
 		}
 
 		$student = mlf_stu_get_by_email($email);
 		if($student != NULL) {
 			mlf_db_close();
 
-			die('<div class="alert alert-warning"><strong>Warning!</strong> Student Email exists in our database, please use another email or visit librayan</div>');
+			die(message('visit_add_4'));
 		}
 
 		// trim function will delete spaces before and after the string.
@@ -60,17 +61,17 @@ if(isset($_POST['student_college_id']) && isset($_POST['national_id']) && isset(
 		mlf_db_close();
 
 		if($result) {
-			die('<div class="alert alert-success"><strong>Success!</strong> you can visit library to confirm you registration ! bring picture with you </div>');
+			die(message('visit_add_5'));
 		} else {
-			die('Failure.');
+			die(message('visit_add_6'));
 		}
 
 
 	} else {
-		die('Fill all fields.');
+		die(message('visit_add_7'));
 	}
 } else {
-	die('Bad access');
+	die(message('visit_add_8'));
 }
 
 ?>
