@@ -1,10 +1,11 @@
 <?php 
 
-$mlf_host = 'localhost';
-$mlf_user = 'tonton';
-$mlf_pass = 'mostring';
+require('config.inc.php');
 
-$mlf_db_name = 'libform';
+$mlf_host = $hostname;
+$mlf_user = $username;
+$mlf_pass = $password;
+$mlf_db_name = $database_name;
 
 @$mlf_handle = mysql_connect($mlf_host, $mlf_user, $mlf_pass);
 if(!$mlf_handle) {

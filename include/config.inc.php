@@ -1,10 +1,10 @@
 <?php 
 
 // Database
-$host = '';
-$username = '';
-$password = '';
-$database_name = '';
+$hostname = 'localhost';
+$username = 'tonton';
+$password = 'mostring';
+$database_name = 'libform';
 
 // file directions
 $homepage = 'mint/memlib.index.php';
