@@ -1,0 +1,27 @@
+ rename bootstrap/css/{custom_save_stu.css => custom_add.css} (100%)
+ delete mode 100644 bootstrap/css/custom_index.css
+ rename bootstrap/css/{custom_signupform.css => custom_visit_signup.css} (100%)
+ rename connect.php => connect.inc.php (100%)
+ rename API_stu.php => db_API.inc.php (100%)
+ rename save_to_confirm.php => member_add.php (95%)
+ rename studentinfo.php => member_info.php (96%)
+ rename test.php => testthename.php (100%)
+ rename save_stu.php => visit_add.php (94%)
+ rename signupform.html => visit_signup.html (95%)
+
+ divide db_API.inc.php => db_API_MEM.inc.php, db_API_VIS.inc.php
+
+ delet db_API.inc.php
+
+ move add_btn.html => test/
+ move connect.inc.php => include/
+ move index.html => test/
+ move libform.sql => backup/
+ move paper.html => test/
+ move testthename.php => test/
+ move db_API_MEM.inc.php => include/
+ move db_API_VIS.inc.php => include/
+ move renew_schema_map => info/
+ move LICENSE => info/
+ move README.md => info/
+ move info/ => backup/
