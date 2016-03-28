@@ -40,7 +40,7 @@ if(isset($_POST['confirmBtn']) && isset($_SESSION['s_id']) && !empty($_SESSION['
 	session_destroy();	
 	
 	if($result) {
-		die(messge('member_add_3'));
+		die(message('member_add_3'));
 	} else {
 		die(message('member_add_4'));
 	}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php require('include/lagn.inc.php'); ?>
+	<?php require('include/lang.inc.php'); ?>
 	<title> <?php echo message('visit_add_1'); ?> </title>
 
 	<!-- Bootstrap core CSS -->

@@ -50,7 +50,7 @@ function message($msg_code) {
 		return "<div class=\"alert alert-success\"><strong>Success!</strong> Confirmation is Done</div>";
 		break;
 	case 'member_add_4';
-		return "Failure.";
+		return "You can\'t be added, please try again";
 		break;
 	case 'member_add_5':
 		return "<div class=\"alert alert-warning\"><strong>Warning!2</strong> No Entry to save</div>";
@@ -90,7 +90,7 @@ function message($msg_code) {
 		return "<div class=\"alert alert-success\"><strong>Success!</strong> you can visit library to confirm you registration ! bring picture with you </div>";
 		break;
 	case 'visit_add_6';
-		return "Failure.";
+		return "You can\'t be added, please try again";
 		break;
 	case 'visit_add_7';
 		return "Fill all fields.";
